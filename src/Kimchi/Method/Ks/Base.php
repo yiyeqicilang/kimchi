@@ -1,6 +1,6 @@
-<?php namespace Kimchi\Method\Ks;
+<?php namespace Qicilang\Kimchi\Method\Ks;
 
-abstract class Base extends \Kimchi\Method\Method
+abstract class Base extends \Qicilang\Kimchi\Method\Method
 {
     public $filterArr = ['1' => 1, '2' => 1, '3' => 1, '4' => 1, '5' => 1, '6' => 1];
 

@@ -20,7 +20,7 @@ class Factory
         if(!isset($this->lotteries[$name])){
             $classes = $this->getLotteryClasses();
             if(!isset($classes[$name])){
-                throw new \Kimchi\Exception\LotteryException("lottery type:{$name} not support!");
+                throw new \Qicilang\Kimchi\Exception\LotteryException("lottery type:{$name} not support!");
             }
             $this->lotteries[$name] = new $classes[$name];
         }

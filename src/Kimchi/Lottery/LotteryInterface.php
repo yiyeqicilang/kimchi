@@ -1,5 +1,5 @@
 <?php
-namespace Kimchi\Lottery;
+namespace Qicilang\Kimchi\Lottery;
 
 interface LotteryInterface
 {

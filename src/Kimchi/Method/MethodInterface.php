@@ -1,5 +1,5 @@
 <?php
-namespace Kimchi\Method;
+namespace Qicilang\Kimchi\Method;
 
 interface MethodInterface
 {

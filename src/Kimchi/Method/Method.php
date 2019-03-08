@@ -1,8 +1,8 @@
 <?php
 
-namespace Kimchi\Method;
+namespace Qicilang\Kimchi\Method;
 
-use \Kimchi\Exception\MethodException;
+use \Qicilang\Kimchi\Exception\MethodException;
 
 abstract class Method implements MethodInterface
 {

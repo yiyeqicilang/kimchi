@@ -1,4 +1,4 @@
-<?php namespace Kimchi\Facades;
+<?php namespace Qicilang\Kimchi\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

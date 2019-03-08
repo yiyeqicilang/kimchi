@@ -1,6 +1,6 @@
-<?php namespace Kimchi\Method\Digital3;
+<?php namespace Qicilang\Kimchi\Method\Digital3;
 
-class ZU3BD extends \Kimchi\Method\Digital5\ZU3BD
+class ZU3BD extends \Qicilang\Kimchi\Method\Digital5\ZU3BD
 {
     public function isDigital3()
     {

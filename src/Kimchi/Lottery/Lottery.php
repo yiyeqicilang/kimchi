@@ -1,5 +1,5 @@
 <?php
-namespace Kimchi\Lottery;
+namespace Qicilang\Kimchi\Lottery;
 
 abstract class Lottery implements LotteryInterface
 {
@@ -10,7 +10,7 @@ abstract class Lottery implements LotteryInterface
         if(!isset($this->methods[$name])){
             $classes = $this->getMethodClasses();
             if(!isset($classes[$name])){
-                throw new \Kimchi\Exception\MethodException("method type:{$name} not support!");
+                throw new \Qicilang\Kimchi\Exception\MethodException("method type:{$name} not support!");
             }
             $this->methods[$name] = new $classes[$name];
         }

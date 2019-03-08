@@ -1,4 +1,4 @@
-<?php namespace Kimchi\Method\Lotto;
+<?php namespace Qicilang\Kimchi\Method\Lotto;
 
 //DWD 需分拆
 class LTDWD extends LTZX1

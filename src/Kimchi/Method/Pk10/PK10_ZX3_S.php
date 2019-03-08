@@ -1,5 +1,5 @@
-<?php namespace Kimchi\Method\Pk10;
-use \Kimchi\Utils\Algorithm;
+<?php namespace Qicilang\Kimchi\Method\Pk10;
+use \Qicilang\Kimchi\Utils\Algorithm;
 
 class PK10_ZX3_S extends Base
 {

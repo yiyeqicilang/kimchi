@@ -1,4 +1,4 @@
-<?php namespace Kimchi\Method\Digital5;
+<?php namespace Qicilang\Kimchi\Method\Digital5;
 
 class RZUHZ2 extends ZUHZ2
 {

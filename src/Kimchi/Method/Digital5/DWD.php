@@ -1,4 +1,4 @@
-<?php namespace Kimchi\Method\Digital5;
+<?php namespace Qicilang\Kimchi\Method\Digital5;
 
 //DWD 需分拆
 class DWD extends ZX1

@@ -1,5 +1,5 @@
-<?php namespace Kimchi\Method\Lotto;
-use \Kimchi\Utils\Algorithm;
+<?php namespace Qicilang\Kimchi\Method\Lotto;
+use \Qicilang\Kimchi\Utils\Algorithm;
 
 //组选胆拖
 class LTDTZU3 extends Base

@@ -1,6 +1,6 @@
-<?php namespace Kimchi\Method\Digital5;
+<?php namespace Qicilang\Kimchi\Method\Digital5;
 
-abstract class Base extends \Kimchi\Method\Method
+abstract class Base extends \Qicilang\Kimchi\Method\Method
 {
     public $digital5_example = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 

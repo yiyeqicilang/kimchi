@@ -1,5 +1,5 @@
-<?php  namespace Kimchi\Method\Digital5;
-use \Kimchi\Utils\Algorithm;
+<?php  namespace Qicilang\Kimchi\Method\Digital5;
+use \Qicilang\Kimchi\Utils\Algorithm;
 
 //2星直选和值
 class ZXHZ2 extends Base

@@ -1,4 +1,4 @@
-<?php namespace Kimchi\Method\Pk10;
+<?php namespace Qicilang\Kimchi\Method\Pk10;
 
 class PK10_DWD extends PK10_ZX1
 {

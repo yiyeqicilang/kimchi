@@ -1,5 +1,5 @@
-<?php namespace Kimchi\Method\Ks;
-use \Kimchi\Utils\Algorithm;
+<?php namespace Qicilang\Kimchi\Method\Ks;
+use \Qicilang\Kimchi\Utils\Algorithm;
 
 //三不同号和值
 class SBTHHZ extends Base

@@ -23,10 +23,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Kimchi\\KimchiServiceProvider"
+                "Qicilang\\Kimchi\\FactoryServiceProvider"
             ],
             "aliases": {
-                "Kimchi": "Kimchi\\Facades\\Kimchi"
+                "Kimchi": "Qicilang\\Kimchi\\Facades\\Kimchi"
             }
         }
     },

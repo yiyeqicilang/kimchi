@@ -1,6 +1,6 @@
-<?php namespace Kimchi\Method\Digital3;
+<?php namespace Qicilang\Kimchi\Method\Digital3;
 
-class HHZX_S extends \Kimchi\Method\Digital5\HHZX_S
+class HHZX_S extends \Qicilang\Kimchi\Method\Digital5\HHZX_S
 {
     public function isDigital3()
     {

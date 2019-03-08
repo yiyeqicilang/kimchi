@@ -1,5 +1,5 @@
-<?php namespace Kimchi\Method\Digital5;
-use \Kimchi\Utils\Algorithm;
+<?php namespace Qicilang\Kimchi\Method\Digital5;
+use \Qicilang\Kimchi\Utils\Algorithm;
 
 //5星3码不定位
 class BDW53 extends Base

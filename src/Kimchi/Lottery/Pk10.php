@@ -1,5 +1,5 @@
 <?php
-namespace  Kimchi\Lottery;
+namespace Qicilang\Kimchi\Lottery;
 
 class Pk10 extends Lottery
 {
@@ -21,12 +21,12 @@ class Pk10 extends Lottery
     public function getMethodClasses()
     {
         return [
-            'PK10_DWD' => \Kimchi\Method\Pk10\PK10_DWD::class,
-            'PK10_ZX1' => \Kimchi\Method\Pk10\PK10_ZX1::class,
-            'PK10_ZX2' => \Kimchi\Method\Pk10\PK10_ZX2::class,
-            'PK10_ZX2_S' => \Kimchi\Method\Pk10\PK10_ZX2_S::class,
-            'PK10_ZX3' => \Kimchi\Method\Pk10\PK10_ZX3::class,
-            'PK10_ZX3_S' => \Kimchi\Method\Pk10\PK10_ZX3_S::class,
+            'PK10_DWD' => \Qicilang\Kimchi\Method\Pk10\PK10_DWD::class,
+            'PK10_ZX1' => \Qicilang\Kimchi\Method\Pk10\PK10_ZX1::class,
+            'PK10_ZX2' => \Qicilang\Kimchi\Method\Pk10\PK10_ZX2::class,
+            'PK10_ZX2_S' => \Qicilang\Kimchi\Method\Pk10\PK10_ZX2_S::class,
+            'PK10_ZX3' => \Qicilang\Kimchi\Method\Pk10\PK10_ZX3::class,
+            'PK10_ZX3_S' => \Qicilang\Kimchi\Method\Pk10\PK10_ZX3_S::class,
         ];
     }
 }

@@ -1,5 +1,5 @@
 <?php
-namespace Kimchi\Exception;
+namespace Qicilang\Kimchi\Exception;
 
 class MethodException extends \Exception
 {

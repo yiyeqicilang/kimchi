@@ -1,5 +1,5 @@
-<?php namespace Kimchi\Method\Ks;
-use \Kimchi\Utils\Algorithm;
+<?php namespace Qicilang\Kimchi\Method\Ks;
+use \Qicilang\Kimchi\Utils\Algorithm;
 
 //二同号单选 单式
 class ETHDX_S extends Base
