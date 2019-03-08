@@ -1,4 +1,4 @@
-<?php namespace Kimchi;
+<?php namespace Qicilang\Kimchi;
 
 use Illuminate\Support\ServiceProvider;
 

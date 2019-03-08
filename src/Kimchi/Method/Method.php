@@ -1,6 +1,4 @@
-<?php
-
-namespace Qicilang\Kimchi\Method;
+<?php namespace Qicilang\Kimchi\Method;
 
 use \Qicilang\Kimchi\Exception\MethodException;
 

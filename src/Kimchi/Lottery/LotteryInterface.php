@@ -1,5 +1,4 @@
-<?php
-namespace Qicilang\Kimchi\Lottery;
+<?php namespace Qicilang\Kimchi\Lottery;
 
 interface LotteryInterface
 {

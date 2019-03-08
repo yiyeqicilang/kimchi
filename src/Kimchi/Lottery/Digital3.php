@@ -1,5 +1,4 @@
-<?php
-namespace Qicilang\Kimchi\Lottery;
+<?php namespace Qicilang\Kimchi\Lottery;
 
 class Digital3 extends Lottery
 {
