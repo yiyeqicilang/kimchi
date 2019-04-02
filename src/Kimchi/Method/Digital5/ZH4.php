@@ -1,8 +1,10 @@
 <?php namespace Qicilang\Kimchi\Method\Digital5;
 use \Qicilang\Kimchi\Utils\Algorithm;
-
+use \Qicilang\Kimchi\Method\Partial\IsJzjd;
 class ZH4 extends Base
 {
+    use IsJzjd;
+
     public $all_count =40000;
 
     public function getMName()
@@ -41,11 +43,6 @@ class ZH4 extends Base
             .$this->lineSep.implode($this->codeSep,$this->digital5_example)
             .$this->lineSep.implode($this->codeSep,$this->digital5_example)
             .$this->lineSep.implode($this->codeSep,$this->digital5_example);
-    }
-
-    public function isJzjd()
-    {
-        return true;
     }
 
     //供测试用 生成随机投注

@@ -1,11 +1,11 @@
 <?php namespace Qicilang\Kimchi\Method\Lotto;
 
-use \Qicilang\Kimchi\Method\Partial\Lotto;
+use \Qicilang\Kimchi\Method\Partial\IsLotto;
 use \Qicilang\Kimchi\Utils\Algorithm;;
 
 abstract class Base extends \Qicilang\Kimchi\Method\Method
 {
-    use Lotto;
+    use IsLotto;
 
     public $filterArr = array('01' => 1, '02' => 1, '03' => 1, '04' => 1, '05' => 1, '06' => 1, '07' => 1, '08' => 1, '09' => 1, '10' => 1, '11' => 1);
 

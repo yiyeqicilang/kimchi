@@ -1,12 +1,11 @@
 <?php namespace Qicilang\Kimchi\Method\Lotto;
 
+use \Qicilang\Kimchi\Method\Partial\IsLottoDwd;
+
 //DWD 需分拆
 class LTDWD extends LTZX1
 {
-    public function isDwd()
-    {
-        return true;
-    }
+    use IsLottoDwd;
 
     public function getMName()
     {

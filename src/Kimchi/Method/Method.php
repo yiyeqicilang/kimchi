@@ -15,27 +15,6 @@ abstract class Method implements MethodInterface
         return strtoupper((new \ReflectionClass($this))->getShortName());
     }
 
-    public function isRx()
-    {
-        return false;
-    }
-
-    public function isRxZxfs()
-    {
-        return false;
-    }
-
-    public function isDwd()
-    {
-        return false;
-    }
-
-    //是否兼中兼得
-    public function isJzjd()
-    {
-        return false;
-    }
-
     //是否复式
     public function isMulti()
     {
@@ -47,6 +26,37 @@ abstract class Method implements MethodInterface
     public function isSingle()
     {
         return !$this->isMulti();
+    }
+
+    public function isRx()
+    {
+        return false;
+    }
+
+    public function isRxZxfs()
+    {
+        return false;
+    }
+
+    public function isDigitalDwd()
+    {
+        return false;
+    }
+
+    public function isLottoDwd()
+    {
+        return false;
+    }
+
+    public function isPk10Dwd()
+    {
+        return false;
+    }
+
+    //是否兼中兼得
+    public function isJzjd()
+    {
+        return false;
     }
 
     //玩法类型
