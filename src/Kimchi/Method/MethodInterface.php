@@ -20,6 +20,8 @@ interface MethodInterface
     public function isPk10();
     public function isLotto();
 
+    public function getAllPosition();
+
     public function randomCodes();
     public function regexp($codes);
     public function count($codes);

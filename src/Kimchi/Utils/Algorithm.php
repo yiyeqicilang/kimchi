@@ -1,5 +1,4 @@
-<?php
-namespace Qicilang\Kimchi\Utils;
+<?php namespace Qicilang\Kimchi\Utils;
 
 class Algorithm {
     public static $_abc=array(

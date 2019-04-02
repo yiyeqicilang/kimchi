@@ -1,6 +1,7 @@
 <?php namespace Qicilang\Kimchi\Method;
 
 use \Qicilang\Kimchi\Exception\MethodException;
+use \Qicilang\Kimchi\Utils\Algorithm;
 
 abstract class Method implements MethodInterface
 {
@@ -103,19 +104,25 @@ abstract class Method implements MethodInterface
     }
 
     /**
-     * @param $sCodes string
-     * @param array $aOpencode array  //['w'=>'','q'=>'','b'=>'','s'=>'','g'=>'']
-     * @param array $aUsePosition //['w','q','b','s','g']
+     * @param $sCodes string // 0,1,2,3,4
+     * @param array $aOpencode array  //['0'=>'','1'=>'','2'=>'','3'=>'','4'=>'']
+     * @param array $aUsePosition //['0','1','2','3','4'] ['2','3','4']
+     * @param array $aChoicedPosition //['0','1','2','3','4'] ['2','3','4']
      * @return array
      * @throws MethodException
      */
-    public function assert($sCodes, Array $aOpencode, Array $aUsePosition)
+    public function assertComb(string $sCodes, Array $aOpencode, Array $aUsedPosition, Array $aChoicedPosition)
     {
-        $results = [];
-        $detail = $this->getDetail();
-        $levels = $detail['levels'];
+        if(count($aChoicedPosition) < count($aUsedPosition)){
+            throw new MethodException("choice position count low than used position!!");
+        }
 
-        //任选玩法组合处理
+        if(count($aUsedPosition) == count($aChoicedPosition)){
+            return $this->assert($sCodes,$aOpencode,$aUsedPosition);
+        }
+
+        Algorithm::getCombination($aChoicedPosition,count($aUsedPosition));
+
         $aAllComb = [];
         if ($this->isRx()) {
             if ($this->isRxZxfs()) {
@@ -124,23 +131,48 @@ abstract class Method implements MethodInterface
                 //按给定位组合
             }
         } else {
-            $aAllComb = [$aUsePosition];
+            $aAllComb = [$aUsedPosition];
+        }
+
+    }
+
+    /**
+     * @param $sCodes string // 0,1,2,3,4
+     * @param array $aOpencode array  //['0'=>'','1'=>'','2'=>'','3'=>'','4'=>'']
+     * @param array $aUsePosition //['0','1','2','3','4'] ['2','3','4']
+     * @return array
+     * @throws MethodException
+     */
+    public function assert(string $sCodes, Array $aOpencode, Array $aUsedPosition)
+    {
+        $results = [];
+        $detail = $this->getDetail();
+        $levels = $detail['levels'];
+
+        //任选玩法组合处理
+        $merged=$aUsedPosition;
+        foreach ($levels as $levelId => $level) {
+            $merged = array_intersect_key($merged, array_flip($level['position']));
+        }
+
+        if(count($merged) != count($aUsedPosition)){
+            throw new MethodException("method Used Position not match level position");
         }
 
         foreach ($levels as $levelId => $level) {
             if (!$levelId) continue;
-            $bingoOpenCode = array_values(array_intersect_key($aOpencode, array_flip($aUsePosition)));
-            if (count($bingoOpenCode) != count($level['position'])) {
+            $slots = array_values(array_intersect_key($aOpencode, array_flip($level['position'])));
+            if (count($slots) != count($level['position'])) {
                 throw new MethodException("method type exception, opencode num not match position");
             }
 
             //转成玩法对应位所需开奖号码
-            $num = (int)$this->assertLevel($levelId, $sCodes, array_values($bingoOpenCode));
+            $num = (int)$this->assertLevel($levelId, $sCodes, array_values($slots));
             if ($num > 0) {
                 //中奖
                 $results[$levelId] = [
                     'num' => $num,
-                    'position' => $bingoOpenCode,
+                    'position' => $slots,
                 ];
 
                 if (!$this->isJzjd()) {

@@ -1,7 +1,11 @@
 <?php namespace Qicilang\Kimchi\Method\Digital5;
 
+use \Qicilang\Kimchi\Method\Partial\Digital5;
+
 abstract class Base extends \Qicilang\Kimchi\Method\Method
 {
+    use Digital5;
+
     public $digital5_example = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
     public $filterArr = ['0' => 1, '1' => 1, '2' => 1, '3' => 1, '4' => 1, '5' => 1, '6' => 1, '7' => 1, '8' => 1, '9' => 1];
@@ -42,9 +46,4 @@ abstract class Base extends \Qicilang\Kimchi\Method\Method
         'h' => '虎',
         'd' => '和',
     ];
-
-    public function isDigital5()
-    {
-        return true;
-    }
 }

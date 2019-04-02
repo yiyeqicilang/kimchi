@@ -1,11 +1,9 @@
 <?php namespace Qicilang\Kimchi\Method\Digital5;
+use \Qicilang\Kimchi\Method\Partial\Rx;
 
 class RZX4 extends ZX4
 {
-    public function isRx()
-    {
-        return true;
-    }
+    use Rx;
 
     public function isRxZxfs()
     {

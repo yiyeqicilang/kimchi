@@ -1,7 +1,11 @@
 <?php namespace Qicilang\Kimchi\Method\Ks;
 
+use \Qicilang\Kimchi\Method\Partial\Ks;
+
 abstract class Base extends \Qicilang\Kimchi\Method\Method
 {
+    use Ks;
+
     public $filterArr = ['1' => 1, '2' => 1, '3' => 1, '4' => 1, '5' => 1, '6' => 1];
 
     public $eth = ['1' => '11', '2' => '22', '3' => '33', '4' => '44', '5' => '55', '6' => '66'];
@@ -16,9 +20,4 @@ abstract class Base extends \Qicilang\Kimchi\Method\Method
     public $sth = ['1' => '111', '2' => '222', '3' => '333', '4' => '444', '5' => '555', '6' => '666'];
 
     public $tx = ['t' => '通选'];
-
-    public function isKs()
-    {
-        return true;
-    }
 }
