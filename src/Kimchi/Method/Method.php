@@ -320,4 +320,24 @@ abstract class Method implements MethodInterface
 
         return $newPrizes;
     }
+
+    /**
+     * @param $prize //奖金
+     * @param $level //奖级信息
+     * @param $toppoint //总代在彩种下的返点
+     */
+    public function calculatePointPrize($prizes,$levels,$point='0.075',$prizebase=2)
+    {
+        //奖金 总利润 总代返点 公司留水
+        $total = $levels['total'];
+        foreach($prizes as $lid => $prize){
+            $level = $levels[$lid];
+            $count = $levels['count'];
+            // 1-(转直*中奖金额/全包金额)
+            $probability=($count*$prize)/($total*$prizebase);
+            $profit = number_format(  1-$probability,3,'.','');
+            $level['profit'] = $profit;
+            $level['rebate']  = $profit - $point;
+        }
+    }
 }

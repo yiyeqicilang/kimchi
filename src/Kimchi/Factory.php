@@ -25,8 +25,8 @@ class Factory
     public function getPrizeGroups()
     {
         return [
-            '1700_1620',
-            '1800_1782',
+            '1700',
+            '1800',
             '1900',
         ];
     }
