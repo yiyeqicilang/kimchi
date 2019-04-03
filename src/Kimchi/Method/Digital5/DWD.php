@@ -1,10 +1,10 @@
 <?php namespace Qicilang\Kimchi\Method\Digital5;
 
-use \Qicilang\Kimchi\Method\Partial\IsDigitalDwd;
+use \Qicilang\Kimchi\Method\Partial\IsDigital5Dwd;
 
 class DWD extends ZX1
 {
-    use IsDigitalDwd;
+    use IsDigital5Dwd;
 
     public function getMName()
     {

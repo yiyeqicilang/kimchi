@@ -9,7 +9,8 @@ interface MethodInterface
 
     public function isRx();
     public function isRxZxfs();
-    public function isDigitalDwd();
+    public function isDigital5Dwd();
+    public function isDigital3Dwd();
     public function isLottoDwd();
     public function isPk10Dwd();
     public function isJzjd();
@@ -22,7 +23,7 @@ interface MethodInterface
     public function isPk10();
     public function isLotto();
 
-    public function getAllPosition();
+    public function getWholePosition();
 
     public function randomCodes();
     public function regexp($codes);

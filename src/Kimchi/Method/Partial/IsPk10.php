@@ -6,7 +6,7 @@ Trait IsPk10 {
         return true;
     }
 
-    public function getAllPosition()
+    public function getWholePosition()
     {
         return [0,1,2,3,4,5,6,7,8,9];
     }

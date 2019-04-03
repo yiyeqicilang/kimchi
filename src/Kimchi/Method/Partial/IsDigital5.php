@@ -6,7 +6,7 @@ Trait IsDigital5 {
         return true;
     }
 
-    public function getAllPosition()
+    public function getWholePosition()
     {
         return [0,1,2,3,4];
     }
