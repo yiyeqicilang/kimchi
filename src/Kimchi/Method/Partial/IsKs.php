@@ -1,6 +1,6 @@
 <?php namespace Qicilang\Kimchi\Method\Partial;
 
-Trait Ks {
+Trait IsKs {
     public function isKs()
     {
         return true;

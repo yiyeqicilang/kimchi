@@ -1,13 +1,13 @@
 <?php namespace Qicilang\Kimchi\Method\Partial;
 
-Trait Digital3 {
-    public function isDigital3()
+Trait IsLotto {
+    public function isLotto()
     {
         return true;
     }
 
     public function getAllPosition()
     {
-        return [0,1,2];
+        return [0,1,2,4,5];
     }
 }

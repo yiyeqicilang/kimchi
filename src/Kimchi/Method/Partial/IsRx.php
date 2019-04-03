@@ -1,6 +1,6 @@
 <?php namespace Qicilang\Kimchi\Method\Partial;
 
-Trait Rx {
+Trait IsRx {
     public function getMName()
     {
         return '任'.parent::getMName();

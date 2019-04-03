@@ -1,10 +1,9 @@
 <?php namespace Qicilang\Kimchi\Method\Digital5;
-
-use \Qicilang\Kimchi\Method\Partial\Digital5;
+use \Qicilang\Kimchi\Method\Partial\IsDigital5;
 
 abstract class Base extends \Qicilang\Kimchi\Method\Method
 {
-    use Digital5;
+    use IsDigital5;
 
     public $digital5_example = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 

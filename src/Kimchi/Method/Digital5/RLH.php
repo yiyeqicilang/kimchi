@@ -1,7 +1,7 @@
 <?php namespace Qicilang\Kimchi\Method\Digital5;
-use \Qicilang\Kimchi\Method\Partial\Rx;
+use \Qicilang\Kimchi\Method\Partial\IsRx;
 
 class RLH extends LH
 {
-    use Rx;
+    use IsRx;
 }

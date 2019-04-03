@@ -9,7 +9,9 @@ interface MethodInterface
 
     public function isRx();
     public function isRxZxfs();
-    public function isDwd();
+    public function isDigitalDwd();
+    public function isLottoDwd();
+    public function isPk10Dwd();
     public function isJzjd();
     public function isMulti();
     public function isSingle();
