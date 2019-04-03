@@ -4,17 +4,6 @@ class Factory
 {
     public $lotteries = [];
 
-    public function getLotteryClasses()
-    {
-        return [
-            'digital5' => Lottery\Digital5::class,
-            'digital3' => Lottery\Digital3::class,
-            'lotto' => Lottery\Lotto::class,
-            'ks' => Lottery\Ks::class,
-            'pk10' => Lottery\Pk10::class,
-        ];
-    }
-
     public function lottery($name)
     {
         if(!isset($this->lotteries[$name])){
@@ -26,6 +15,31 @@ class Factory
         }
 
         return $this->lotteries[$name];
+    }
+
+    public function prize($name)
+    {
+
+    }
+
+    public function getPrizeGroups()
+    {
+        return [
+            '1700_1620',
+            '1800_1782',
+            '1900',
+        ];
+    }
+
+    public function getLotteryClasses()
+    {
+        return [
+            'digital5' => Lottery\Digital5::class,
+            'digital3' => Lottery\Digital3::class,
+            'lotto' => Lottery\Lotto::class,
+            'ks' => Lottery\Ks::class,
+            'pk10' => Lottery\Pk10::class,
+        ];
     }
 
     public function showDigital5MethodClasses()
