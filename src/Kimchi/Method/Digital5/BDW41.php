@@ -15,9 +15,11 @@ class BDW41 extends Base
     {
         return [
             'total' => 10000,
-            '1' => [
-                'count' => 3439,
-                'position' =>[0,1,2,3],
+            'levels' => [
+                '1' => [
+                    'count' => 3439,
+                    'position' =>[0,1,2,3],
+                ]
             ]
         ];
     }
